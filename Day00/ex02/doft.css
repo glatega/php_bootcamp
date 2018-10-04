@@ -1,0 +1,109 @@
+body
+{
+	background-color: #505050;
+	margin: 0 15vw;
+}
+.grey_block
+{
+	background-color: #909090;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px black;
+	margin: 0 25px;
+}
+.green_block
+{
+	background-color: #4eff79;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px black;
+	margin: 10px;
+	height: 6vw;
+	left: 17vw;
+	position: absolute;
+	padding: 10px 35px 40px 10px;
+}
+.header
+{
+	padding: 5px;
+	height: 6.5vw;
+	margin: 0 4vw;
+    margin-top: 15px;
+}
+.header > div
+{
+	display: inline-block;
+}
+#title_42
+{
+	width: 82%;
+}
+#magnifying_glass
+{
+	width: 15%;
+	position: relative;
+    left: 1vw;
+    top: 1.7vw;
+}
+.sidebars
+{
+	width: 150px;
+	display: inline-block;
+	float: left;
+	padding: 10px 0;
+	min-height: 19vw;
+}
+.sidebars > div
+{
+	height: 20%;
+	text-align: center;
+}
+.sidebars > div > img
+{
+	height: 3.5vw;
+}
+.screen
+{
+	display: inline-block;
+	/* width: calc(78% - 70px); */
+	float: left;
+	padding: 5px;
+}
+#selected_option
+{
+	border: 5px solid red;
+    border-radius: 5px;
+}
+#book
+{
+	height: 4.5vw;
+}
+#towel
+{
+	height: 2vw;
+}
+#brick
+{
+	height: 3.5vw;
+	background-image: url("resources/brick.jpg");
+	margin: 0 10px;
+}
+.input_box
+{
+	margin-left: 2px;
+    width: 420px;
+    border: 2px solid #9d969d;
+    border-bottom-color: #eeeeee;
+    border-right-color: #eeeeee;
+    height: 15px;
+}
+.input_button
+{
+	border: 1px solid #a8a4a5;
+    border-radius: 1px;
+    background-color: #f4eff3;
+    background: #0079ff;
+    margin-left: 4px;
+    height: 22px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4eff3), to(#dcdcdc));
+}
