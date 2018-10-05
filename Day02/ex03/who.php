@@ -12,11 +12,6 @@ for ($offset = 1256; $offset < $size; $offset += 628)
 	$sessions[] = $sesh;
 }
 foreach ($sessions as $sesh)
-{
-	if ($sesh[status] == 7)
-	{
-		$dt = new DateTime($sesh[time]);
-		echo $sesh[user]."  ".$sesh[host]."  ".$dt->format("M  j G:i")."\n";
-	}
-}
+	if ($sesh["status"] == 7)
+		echo $sesh["user"]."  ".$sesh["host"]."  ".date("M  j G:i", $sesh["time"])."\n";
 ?>
