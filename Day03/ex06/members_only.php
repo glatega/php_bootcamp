@@ -9,8 +9,6 @@ if (array_key_exists($user, $member_passwords) && $pw == $member_passwords[$user
 	echo "Hello Zaz<br /><img src='data:image/png;base64,".$img."'>";
 }
 else
-{
 	echo "That area is accessible for members only";
-}
 echo "</body></html>";
 ?>
