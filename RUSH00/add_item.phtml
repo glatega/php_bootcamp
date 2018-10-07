@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add item</title>
+</head>
+<body>
+<?php
+if ($_GET["success"] == "yes")
+	echo '<script>alert("Item successfully created");</script>';
+elseif ($_GET["success"] == "no")
+	echo '<script>alert("ERROR: Item already exists");</script>';
+?>
+    <h1>Add item:</h1>
+    <form action="add_item.php" method="post">
+        Item name:      <input type="text" name="name" placeholder="Name" value="" required>
+        <br><br>
+        Cost:           <input type="text" name="cost" placeholder="0 gold" value="" required>
+        <br><br>
+        Description:    <input type="text" name="desc" placeholder="Use: Teleport ..." value="" required>
+		<br><br>
+        Flavour text:    <input style="font-style:italic;" type="text" name="flav" placeholder="What a hero truly needs" value="" required>
+        <br><br>
+        Image:          <input type="text" name="img" placeholder="./imgs/img.png" value="" required>
+        <br><br>
+        Categories:     <input type="text" name="cats" placeholder="Arcane, Weapon" value="" required>
+        <br><br>
+        <button type="submit" name="submit" value="OK">Add</button>
+    </form>
+</body>
+</html>

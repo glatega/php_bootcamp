@@ -1,0 +1,22 @@
+<?php
+if ($_GET["axe"] != "axe")
+	echo 'Not authorized to view this page';
+else
+	echo '<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Landing page</title>
+	</head>
+	<body>
+		<h1>Welcome ADMIN</h1>
+		Add item: <a href="add_item.phtml">ADD</a>
+		<br>
+		Remove item: <a href="delete_item.phtml">REMOVE</a>
+		<br>
+		Delete account: <a href="delete.html">DELETE</a>
+		<br>
+		SHOP: <a href="shop.phtml">SHOP</a>
+	</body>
+	</html>
+	'
+?>

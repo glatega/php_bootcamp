@@ -1,0 +1,36 @@
+<?php
+session_start();
+$item = unserialize(@file_get_contents('./private/items'))[$_GET["item"]];
+if ($_GET["success"] == "yes")
+	echo '<script>alert("'.$_GET["item"].' added to basket");</script>';
+echo "<pre>";	print_r($_SESSION);	echo "</pre>";
+?>
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css">
+	</head>
+	<body style="background:#6b635f;">
+		<p id="item_header">
+			<img src="<?php echo "./imgs/".$item["cats"].".png" ?>">
+			<?php echo $_GET["item"]; ?>
+		</p>
+		<div style="margin:0 10vw">
+			<div style="width:100%; text-align:center; position:relative;">
+				<div style="display:inline-block; padding-right: 5vw; margin-left: -12vw;">
+					<img height="150px" src="<?php echo $item["img"] ?>">
+				</div>
+				<div style="display:inline-block; position:absolute; top:25%; height:50%; width: 150px; padding-left: 5vw">
+					<p style="margin:0; font-size: 42px; color: gold; position: relative; line-height:50px; width: 100%; text-align:right; left:5px">
+						<img style="height:50px; position:absolute; left:0px;" src="./imgs/gold.png">
+						<?php echo $item["cost"]; ?>
+					</p>
+					<form action="add_to_basket.php" method="post">
+						<button name="item" value="<?php echo $_GET["item"]; ?>" class="cartButton">Add to cart</button>
+					</form>
+				</div>
+			</div>
+			<p style="text-align: center; font-style: italic; font-size: 42px;"><?php echo $item["flav"] ?></p>
+		</div>
+	</body>
+</html>
+

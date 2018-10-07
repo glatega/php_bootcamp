@@ -1,0 +1,54 @@
+<HTML>
+	<HEAD>
+		<TITLE>
+			Shop
+		 </TITLE>
+		 <STYLE>
+			body {background-color : rgb(113, 153, 113);}
+			H1 {color: rgb(100, 96, 96);}
+			H1 {text-align: center;}
+			div.gallery 
+			{
+				margin: 5px;
+				border: 1px solid rgb(172, 158, 158);
+				float: left;
+				width: 14vmin;
+			}
+			div.gallery:hover 
+			{
+				border: 1px solid rgb(75, 64, 64);
+			}
+			div.gallery img
+			{
+				width: 100%;
+				height: auto;
+			}
+			div.desc
+			{
+			padding: 10px;
+			text-align: center;
+			font-size: 1.5vmin;
+			}
+			hr
+			{
+				clear:left;
+			}
+</STYLE>
+	</HEAD>
+	<BODY>
+		<H1>Secret Shop</H1> <BR />
+		<?php
+		$data = @file_get_contents('./private/items');
+		$data = unserialize($data);
+		foreach ($data as $name => $item)
+		{
+			echo '<DIV class="gallery">';
+			echo '<a href="./item_details.phtml?item=';
+			echo $name;
+			echo '"><IMG src="';
+			echo $item['img'];
+			echo '">'.'<DIV class="desc">'.$name,'</DIV></A></DIV>';
+		}
+	?>
+	 </BODY>
+ </HTML>
